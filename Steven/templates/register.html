@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Register Account</title>
+  <link href="{% static 'style.css' %}" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <header>
+    <nav>
+      <span><a href="{% url 'register' %}">Create Account</a></span>
+      <span><a href="{% url 'login' %}">Sign In</a></span>
+      <span><a href="{% url 'home' %}">Go home</a></span>
+    </nav>
+  </header>
+  <main>
+    {% if errors is not None %}
+      <div class="notification-box">
+        {% for error in errors %}
+        <div>
+          <span class="icon red-icon">&#9888;</span>
+          <p class="error-message">{{ error }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+    {% if register_status is not None %}
+        <div class="notification-box">
+          {% if register_status == "success" %} 
+            <div>
+              <span class="icon green-icon">&#9888;</span>
+              <p class="pass-message">Registration Successful!</p>
+            </div>
+          {% else %}
+            <div>
+              <span class="icon red-icon">&#9888;</span>
+              <p class="error-message">Registration Failed!</p>
+            </div>
+          {% endif %}
+        </div>
+    {% endif %}
+    <form method="POST" action="{% url 'register' %}">
+      <p id="form-title">REGISTER ACCOUNT</p>
+      {% csrf_token %}
+      <p><label for="first_name">First Name: </label></p>
+      <input type="text" name="firstname" id="first_name" required/>
+      
+      <p><label for="last_name">Last Name: </label></p>
+      <input type="text" name="lastname" id="last_name" required/>
+      
+      <p><label for="tel_no">Phone number: </label></p>
+      <input type="tel" name="tel_no" id="tel_no" required/>
+
+      <p><label for="gender">Gender: </label></p>
+      <input list="gender" />
+      <datalist id="gender">
+        <option name="gender" value="Male">
+        <option name="gender" value="Female">
+        <option name="gender" value="Non-binary">
+        <option name="gender" value="Prefer not to say">
+      </datalist>
+      <p><label for="country">Country: </label></p>
+      <input type="text" name="country" id="country" required/>
+
+      <p><label for="state">State/Province: </label></p>
+      <input type="text" name="state" id="state" placeholder="Enter state" required/>
+      
+      <p><label for="username">Email: </label></p>
+      <input type="text" name="username" id="username" required/>
+      
+      <p><label for="email">Email: </label></p>
+      <input type="email" name="email" id="email" required/>
+      
+      <p><label for="password">Password: </label></p>
+      <input type="password" name="password" id="password"  required/>
+
+      <p><label for="confirm_password">Confirm Password: </label></p>
+      <input type="password" name="confirm_password" id="confirm_password"  required/>
+
+      <input type="submit" name="register" id="submit" required/>
+    </form>
+  </main>
+  <footer><p>Copyright &copy <b>2022</b></p></footer>
+</body>
+
+</html>

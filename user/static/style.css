@@ -1,0 +1,263 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body{
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  background-color: #151515;
+}
+
+header {
+  margin: 0;
+  background-color: black;
+  min-height: 30px;
+  padding-top: 10px;
+  text-align: right;
+  padding: 8px;
+  padding-right: 15px;
+}
+header span#title{
+  color:rgb(250, 250, 250);
+  text-align: center;
+}
+header nav span{
+  background: linear-gradient(180deg, rgb(0, 0, 0) 90%, rgb(250, 250, 250) 5%);
+  color: white;
+  border: 0.5px solid white;
+  font-family: Monospace;
+  padding: 5px;
+  cursor: pointer;
+}
+header nav span a{
+  text-decoration: none;
+  color: inherit;
+}
+header span a:focus, header span a:hover, header span a:visited, header span a:active{
+  color: white;
+}
+
+main{ 
+  width: 100%;
+  margin-top: 10px;
+}
+
+main .notification-box{
+  background-color:white;
+  font-family: monospace;
+  color: black;
+  border-radius: 2px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  max-width: 200px;
+  padding-left: 5px;
+}
+
+main .notification-box .icon{
+  font-size: 20px;
+  font-weight: bolder;
+}
+main .notification-box .green-icon{
+  color: green;
+}
+  main .notification-box .red-icon{
+  color: red;
+}
+
+main .notification-box div span{
+  width: 25%;
+  font-weight: bolder;
+}
+main .notification-box div p{
+  width: 74%;
+  text-align: center;
+  display: inline-block;
+}
+  main .notification-box .error-message{
+  color: red;
+  font-weight: bolder;
+}
+main .notification-box .pass-message{
+  color: green;
+  font-weight: bolder;
+}
+
+main form{
+  margin-top: 10px;
+  max-width: 200px;
+  padding: 10px;
+  border:2px solid black;
+  color: white;
+  background-color: black;
+  font-family: serif;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 30px;
+}
+
+main form p#form-title{
+  font-family: Monospace;
+  text-align: center;
+}
+
+main form label{
+  font-size: 16px;
+  font-family: Monospace;
+}
+
+main form input{
+  border-style: none;
+  border: none;
+  outline: hidden;
+  border-color: transparent;
+  margin: 0px;
+  border-bottom: 2px solid white;
+}
+
+main form input:focus, main form input:active, main form input:hover{
+  outline: hidden;
+}
+main form input#submit{
+  margin-top: 10px;
+  font-size: 15px;
+  text-align: right;
+  border: 1px solid white;
+  font-family: 'Times New Roman', Times, serif;
+  border-radius: 2px;
+  background: linear-gradient(135deg, rgb(0, 0, 0) 95%, rgb(250, 250, 250) 5%);
+  color: white;
+  cursor: pointer;
+}
+
+main form input#submit:focus{
+  opacity: 0.7;
+}
+
+main section h2{
+  font-size: 17px;
+}
+
+main section#about-me{
+  margin-left: 10px;
+  padding: 10px;
+  color: white;
+  background-color: black;
+  width: 50%;
+  border-color: transparent;
+  margin: 0 auto;
+  line-height: 2;
+  letter-spacing: 0.06rem;
+  text-align: left;
+  font-family: geomanist, 'Arial Narrow Bold', sans-serif;
+}
+
+main section.contact-info{
+  margin: 10px 5px;
+}
+main section.contact-info article{
+  color: white;
+  background-color: black;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+main section#profile p#contact-name{
+  color: white;
+  font-family: geomanist, -apple-system, BlinkMacSystemFont, roboto, segoe ui, Helvetica, Arial, sans-serif;
+  font-display: auto;
+  text-align: center;
+  font-size: 1.65em;
+}
+
+main section#profile div#contact-pic{
+  text-align: center;
+}
+
+main section#profile div#contact-pic img{
+  border-radius: 100px;
+  margin-top: 20px;
+  margin-bottom: -20px;
+  border: 2px solid transparent;
+}
+
+main section.contact-info article{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: bolder;
+  width: 30%;
+  margin-left: 10px;
+}
+main section.contact-info hr{
+  border-top:1px solid black;
+  margin-bottom: 0;
+}
+
+main section.contact-info span{
+  font-weight: bolder;
+}
+main section.contact-info li{
+  margin-left: -10px;
+}
+
+
+main #contact-box{
+  width: 200px;
+  height: 200px;
+  background-color: black;
+  border: 2px solid rgb(7, 7, 7);
+  color: white;
+  float: right;
+  position: relative;
+  margin-bottom: 10px;
+  margin-right: 15px;
+  font-family: Monospace;
+}
+main #contact-box #box-title{
+  text-align: center;
+  text-decoration: underline;
+}
+
+main #contact-box #box-icon{
+  background: url(https://i.pinimg.com/736x/f3/3c/c0/f33cc07fa0044261d61a6645a67ef496.jpg) repeat 0 0;
+  background-size: 100%;
+  width: 50px;
+  height: 50px;
+  height: 50px;
+  border: 2px solid white;
+  border-radius: 100px;
+  margin: 20px auto;
+  cursor: pointer;
+}
+
+main #contact-box #box-icon:hover{
+  padding: 2px;
+}
+main #contact-box button a{
+  text-decoration: none;
+  color: black;
+}
+
+main #contact-box p button{
+  font-family: cursive;
+  border-radius: 5px;
+  background-color: white;
+  color: black;
+  position: absolute;
+  right: 10px;
+  bottom: 5px;
+  cursor: pointer;
+}
+
+main #contact-box p button:hover{
+  padding: 5px;
+  background: linear-gradient(180deg, rgb(255, 255, 255) 90%, rgb(95, 0, 0) 20%);
+}
+
+footer{
+  background: linear-gradient(354deg, rgb(18, 18, 19) 99%, rgb(42, 40, 40) 1% );
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: white;
+  text-align: center;
+}

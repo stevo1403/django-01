@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_content %}
+<h1>{{ contact.username }} | {{ contact.email }} | {{ contact.brief_message }}</h1>
+<div class="row">
+    </div>
+    <div class="col-md-4">
+        <h5 class="card-title">{{ contact.username }}</h5>
+        <h5 class="card-title">{{ contact.email }}</h5>
+        <p class="card-text">{{ contact.message }}</p>
+    </div>
+</div>
+{% endblock %}
